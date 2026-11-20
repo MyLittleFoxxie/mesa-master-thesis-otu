@@ -1,0 +1,41 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{Context and Motivation}
+\label{sec:intro_motivation}
+
+Software engineering teams increasingly evaluate artificial intelligence (AI) models and coding agents using public benchmark scores~\cite{jimenez_swebench_2024,hu_se_benchmarks_2025}. When a benchmark score is used to decide whether an AI component satisfies a software requirement, the team relies on a chain of assumptions: that benchmark tasks represent the target workload, that grading checks actually enforce task correctness, that scores are not inflated by prior exposure or test-runner tampering, and that the observed sample size supports the required threshold under statistical uncertainty~\cite{reuel_betterbench,miller_error_bars_2024}.
+
+\todo[inline]{Expand the motivating SymPy scenario: a team requiring an agent to resolve at least 70\% of SymPy bug reports sees 35 of 44 tasks resolved on \swebench{} (79.5\%), raising the question of whether that score justifies acceptance.}
+
+\section{Problem Statement}
+\label{sec:intro_problem}
+
+Two connected gaps prevent teams from treating benchmark reviews and benchmark scores as reliable evidence for software requirement decisions:
+\begin{enumerate}
+    \item \textbf{Incomparable and conflated benchmark reviews:} Published benchmark review frameworks~\cite{reuel_betterbench,liu_ecbd_2024,san_joaquin_scorecard_2026,cao_how2bench_2025,zhu_agentic_benchmark_checklist_2025,corona_benchmark_caliper_2026,cohn_hernandez_orallo_oecd_2023} ask overlapping questions in different vocabularies, assign conflicting verdicts on the same benchmark, and frequently conflate missing documentation with located defects.
+    \item \textbf{Missing bridge from review findings to requirement decisions:} Even when a benchmark review flags weak tests, modifiable grading harnesses, or potential training exposure~\cite{yu_utboost_2025,wang_solved_issues_2026,openai_swebench_audit_2026}, teams lack a fail-closed rule specifying when benchmark evidence remains admissible, how defective tasks should be handled, and what statistical threshold a score supports.
+\end{enumerate}
+
+\section{Research Questions}
+\label{sec:intro_rqs}
+
+This thesis addresses the overarching question: \emph{How can benchmark review frameworks be unified into traceable evidence records and operationalized to govern software requirement decisions?}
+
+\begin{itemize}
+    \item \textbf{RQ1 (Framework agreement and missing information):} To what extent do existing AI benchmark review frameworks agree when applied to the same benchmarks, and how do they treat missing documentation versus located defects? (Addressed in Chapter~\ref{ch:mesa}.)
+    \item \textbf{RQ2 (Rubric repeatability and defect detection):} When a unified evidence rubric (\mesa{}) is derived from existing frameworks and applied by multiple language model families, how repeatable are its verdicts and evidence levels, and does it detect planted and known benchmark defects? (Addressed in Chapter~\ref{ch:mesa}.)
+    \item \textbf{RQ3 (Requirement decision outcomes):} For a concrete software requirement (SymPy bug-fixing at a 0.70 threshold), what do seven decision methods combining benchmark review findings with exact statistical bounds conclude compared with a direct test on post-cutoff issues? (Addressed in Chapter~\ref{ch:decisions}.)
+\end{itemize}
+
+\section{Thesis Contributions and Structure}
+\label{sec:intro_contributions}
+
+This thesis integrates two empirical studies:
+\begin{itemize}
+    \item \textbf{Chapter~\ref{ch:background} (Background and Related Work):} Surveys benchmark validity in requirements engineering for AI, existing benchmark review frameworks, and statistical acceptance testing.
+    \item \textbf{Chapter~\ref{ch:mesa} (Unifying Benchmark Review Frameworks with \mesa{}):} Maps 280 items from seven frameworks onto 30 shared concerns, introduces the 39-criterion \mesa{} rubric, and evaluates framework agreement, missing-information penalties, repeatability across Claude and Gemini, and defect detection on four benchmarks.
+    \item \textbf{Chapter~\ref{ch:decisions} (Applying Benchmark Reviews to Requirement Decisions):} Operationalizes \mesa{} inside a fail-closed three-step decision method and evaluates it across 88 SymPy coding-agent sessions (44 \swebench{} tasks and 44 post-cutoff SymPy issues).
+    \item \textbf{Chapter~\ref{ch:synthesis} (Synthesis, Discussion, and Threats to Validity):} Synthesizes how \mesa{} review records govern requirement decision policies and consolidates threats to validity across both studies.
+    \item \textbf{Chapter~\ref{ch:conclusion} (Conclusion and Future Work):} Summarizes findings, artifact availability, and directions for human evaluation and broader replications.
+\end{itemize}

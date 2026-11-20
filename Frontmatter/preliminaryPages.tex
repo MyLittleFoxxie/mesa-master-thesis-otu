@@ -1,0 +1,64 @@
+% Preliminary pages stub for Ontario Tech University SGS requirements.
+% Replace or align with the official Ontario Tech SGS Frontmatter/preliminaryPages.tex when available.
+
+%----------------------------------------------------------------------------------------
+%	THESIS EXAMINATION INFORMATION
+%----------------------------------------------------------------------------------------
+\chapter*{Thesis Examination Information}
+\addcontentsline{toc}{chapter}{Thesis Examination Information}
+
+\todo[inline]{Replace with the official Ontario Tech University SGS Thesis Examination Information table (Committee Chair, Research Supervisor, Examining Committee members, Date of Defense).}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+\addchaptertocentry{\abstractname}
+
+Software engineering teams increasingly rely on public artificial intelligence (AI) benchmark scores as evidence that a model or coding agent satisfies a system requirement. That inference holds only if the benchmark itself withstands methodological review and if the resulting score supports the required threshold under statistical uncertainty. This thesis addresses both halves of that problem through two connected empirical studies.
+
+First, we examine why published AI benchmark review frameworks reach conflicting verdicts when applied to the same benchmark. We map 280 items from seven benchmark review frameworks onto 30 shared concerns and derive \mesa{} (Meta-Evaluation Standard for AI), a 39-criterion evidence rubric that separates source support from check outcomes. Applying six frameworks to four benchmarks (HumanEval, TruthfulQA, Humanity's Last Exam, and $\tau$-bench) shows that existing frameworks agree on 159 of 302 shared comparisons and penalize unreported practices 210 times against 13 cited defects. Across two reviewer model families (Claude and Gemini), \mesa{} achieves 88\% to 91\% verdict repeatability, detects every planted defect, and yields 14 script-confirmed failed ratings on known benchmark defects.
+
+Second, we operationalize \mesa{} ratings inside a fail-closed, three-step decision method for software requirements verification: Step~1 checks session record integrity, Step~2 applies benchmark review admissibility policies and defect filtering, and Step~3 applies exact one-sided 95\% binomial bounds against a target requirement threshold. In an empirical study of 88 coding-agent sessions on SymPy (44 \swebench{} tasks and 44 post-cutoff SymPy issues against a 0.70 resolve-rate requirement), benchmark test suites accepted deliberately incomplete patches on 32 of 44 tasks and allowed test-runner edits to pass grading. Strict policies returned no decision; independent patch checks retained 38 tasks (31 resolved, Inconclusive) where naive filtering left 12; and the direct test on post-cutoff issues resolved 21 of 44 (Reject). Together, these studies show how structured benchmark reviews and fail-closed decision rules turn raw benchmark scores into traceable evidence for software requirement decisions.
+
+\end{abstract}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR'S DECLARATION
+%----------------------------------------------------------------------------------------
+\chapter*{Author's Declaration}
+\addcontentsline{toc}{chapter}{Author's Declaration}
+
+I hereby declare that this thesis consists of original work of which I have authored. This is a true copy of the thesis, including any required final revisions, as accepted by my examiners.
+
+I authorize the University of Ontario Institute of Technology (Ontario Tech University) to lend this thesis to other institutions or individuals for the purpose of scholarly research. I further authorize University of Ontario Institute of Technology (Ontario Tech University) to reproduce this thesis by photocopying or by other means, in total or in part, at the request of other institutions or individuals for the purpose of scholarly research. I understand that my thesis will be made electronically available to the public.
+
+\vspace{1.5cm}
+\noindent\rule{7cm}{0.4pt}\\
+\authorname
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	STATEMENT OF CONTRIBUTIONS
+%----------------------------------------------------------------------------------------
+\chapter*{Statement of Contributions}
+\addcontentsline{toc}{chapter}{Statement of Contributions}
+
+\todo[inline]{Document the manuscripts integrated into this thesis (Chapter~3 based on the MESA framework comparison and rubric study; Chapter~4 based on the Requirement Decisions empirical study on SymPy), author roles, and AI-assistant disclosure.}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+\todo[inline]{Add thesis acknowledgements.}
+
+\clearpage

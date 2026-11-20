@@ -1,0 +1,33 @@
+# LaTeX build and auxiliary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.pdfsync
+*.ps
+*.run.xml
+*.snm
+*.synctex.gz
+*.tdo
+*.toc
+*.vrb
+*.xdv
+
+# Compiled root thesis PDF (figures under Figures/*.pdf remain tracked)
+/main.pdf
+
+# Python / OS artifacts
+__pycache__/
+*.pyc
+.DS_Store
