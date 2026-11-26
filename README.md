@@ -1,5 +1,7 @@
 # Benchmark Evidence for Software Requirement Decisions
 
+> **Moved:** This repository has been superseded by the Overleaf-linked thesis repository at [MyLittleFoxxie/thesis-otu](https://github.com/MyLittleFoxxie/thesis-otu). The MSSurvey preview is now served at [mylittlefoxxie.github.io/thesis-otu](https://mylittlefoxxie.github.io/thesis-otu/) from its `survey/mesa-human-review` branch.
+
 Master's thesis repository (Ontario Tech University, `MastersDoctoralThesis` LaTeX template) uniting two empirical studies on artificial intelligence benchmark evaluation and software requirement decisions:
 
 1. **MESA (Chapter 3):** Unifying seven AI benchmark review frameworks (280 items, 30 shared concerns) into a 39-criterion evidence rubric evaluated across four benchmarks and two reviewer model families.
