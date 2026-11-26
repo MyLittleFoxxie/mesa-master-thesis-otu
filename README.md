@@ -15,6 +15,8 @@ Master's thesis repository (Ontario Tech University, `MastersDoctoralThesis` LaT
 | `Appendices/` | `AppendixA.tex` (MESA concerns and 39-criterion rubric) and `AppendixB.tex` (decision policies, statistical cut points, and artifacts). |
 | `BibFiles/references.bib` | Shared BibTeX bibliography (`biblatex`, `backend=bibtex`, `style=numeric`, `natbib=true`). |
 | `Figures/` | Study overview figures (`mesa_study_overview.pdf`, `decisions_study_overview.pdf`). |
+| [`survey/`](survey/README.md) | MSSurvey materials, preview, and analysis tools. |
+| `docs/` | Survey preview for GitHub Pages. |
 | `tools/verify_thesis.py` | Offline checker for includes, citations, labels, figure paths, and LaTeX compilation. |
 
 ## Template Setup
