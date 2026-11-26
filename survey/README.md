@@ -1,5 +1,7 @@
 # MSSurvey guided review study
 
+> **Moved:** The active survey preview is now at [mylittlefoxxie.github.io/thesis-otu](https://mylittlefoxxie.github.io/thesis-otu/) and its source is in [MyLittleFoxxie/thesis-otu (`survey/mesa-human-review`)](https://github.com/MyLittleFoxxie/thesis-otu/tree/survey/mesa-human-review/survey).
+
 ## Preview
 
 Open `survey.html` to try all six cards. The preview keeps drafts in the browser and has delivery disabled. The build also writes the same preview to `docs/index.html` at the repository root for GitHub Pages.
